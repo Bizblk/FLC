@@ -9,8 +9,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var diametrs = lines
+    
     var body: some View {
-        Text("Hello, World!")
+        
+        List {
+           LineCell()
+            
+        }
+        
     }
 }
 
