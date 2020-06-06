@@ -12,7 +12,7 @@ var diametr = lines
 
 struct LineCell: View {
     
-    var line = lines[3]
+    var line: Line
     
     @State var enterTheWeight = ""
     
@@ -31,20 +31,20 @@ struct LineCell: View {
         
         VStack {
             HStack() {
-                Spacer(minLength: 10)
+                Spacer(minLength: 20)
                 Text("Dia")
-                Spacer(minLength: 160)
-                Text("Metr/Spool")
-                Spacer()
-                Text("Count/Spool")
-                Spacer(minLength: 30)
+                Spacer(minLength: 135)
+                Text("Metrs")
+                Spacer(minLength: 10)
+                Text("Count")
+                Spacer(minLength: 35)
             }
             HStack {
                 
                 HStack {
-                    Spacer()
+                    Spacer(minLength: 20)
                     Text(line.name)
-                    TextField("enter the weight", text: $enterTheWeight).frame(width: 140)
+                    TextField("enter weight", text: $enterTheWeight).frame(width: 100)
                     Spacer()
                 }
                 VStack {
@@ -76,6 +76,6 @@ struct LineCell: View {
 
 struct LineCell_Previews: PreviewProvider {
     static var previews: some View {
-        LineCell()
+        LineCell(line: lines[3])
     }
 }

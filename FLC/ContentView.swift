@@ -14,10 +14,19 @@ struct ContentView: View {
     
     var body: some View {
         
-        List {
-           LineCell()
+        NavigationView {
+            
+            List {
+                ForEach(diametrs, content: { line in
+                    LineCell(line: line)
+                })
+                      
+                       
+            }
+            .navigationBarTitle("FLC",displayMode: .inline)
             
         }
+       
         
     }
 }
