@@ -11,15 +11,6 @@ import Foundation
                         
 
 
-//enum Metr: Int {
-//    case twentyFive = 25
-//    case fifty = 50
-//    case hundred = 100
-//    case hundredFifty = 150
-//}
-
-
-
 
 struct Line : Identifiable, Hashable{
     var id = UUID()
