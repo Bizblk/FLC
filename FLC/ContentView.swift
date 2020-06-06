@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var diametrs = lines
+    var diametrs = lines[0]
     
     var body: some View {
         
@@ -20,13 +20,13 @@ struct ContentView: View {
                 ForEach(diametrs, content: { line in
                     LineCell(line: line)
                 })
-                      
-                       
+                
+                
             }
             .navigationBarTitle("FLC",displayMode: .inline)
             
         }
-       
+        
         
     }
 }

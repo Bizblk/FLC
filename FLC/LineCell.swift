@@ -76,6 +76,6 @@ struct LineCell: View {
 
 struct LineCell_Previews: PreviewProvider {
     static var previews: some View {
-        LineCell(line: lines[3])
+        LineCell(line: lines[0][0])
     }
 }
