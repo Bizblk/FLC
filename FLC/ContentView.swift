@@ -10,14 +10,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var diametrs = lines[0]
+    var diametrs = lines
     
     var body: some View {
         
         NavigationView {
             
             List {
-                ForEach(diametrs, content: { line in
+                ForEach(diametrs[0], content: { line in
                     LineCell(line: line)
                 })
                 
