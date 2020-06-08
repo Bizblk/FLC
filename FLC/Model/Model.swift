@@ -59,6 +59,24 @@ enum Category: String {
     
 }
 
+//MARK: Catalog
+
+struct Catalog: Identifiable, Hashable {
+    
+    var id = UUID()
+    var name: String
+    var image: String
+    
+    
+}
+
+var catalog = [
+    Catalog(name: "Baits", image: "2"),
+    Catalog(name: "Fishing Line", image: "1")
+]
+
+
+
 
 //MARK: BAIT
 
