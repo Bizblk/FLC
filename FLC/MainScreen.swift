@@ -14,14 +14,16 @@ struct MainScreen: View {
         
         
         
-        VStack {
+        VStack() {
             NavigationView {
                 
                 
-                List {
-                    ForEach(catalog, content: { item in
-                        MainScreenCell(item: item)
-                    })
+                VStack {
+                    NavigationLink(destination: SpoonCell()) {
+                        SpoonMainScreenCell(item: catalog[0])
+                    }.buttonStyle(PlainButtonStyle())
+                    
+                    FishingLineMainScreenCell(item: catalog[1])
                 }
                 .navigationBarTitle("Catalog", displayMode: .inline)
             }

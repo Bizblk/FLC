@@ -17,8 +17,14 @@ struct SpoonDetailCell: View {
         VStack {
             Image(item.color[0]).resizable().frame(width: 400, height: 300)
             Spacer()
-            Text(item.discription)
+            
+            ScrollView {
+                Text(item.discription)
+                .multilineTextAlignment(.center)
+            }
+            
             Text(String(item.price))
+            SpoonTableWeight(item: item)
             SliderCell(item: item)
             
             

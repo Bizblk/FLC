@@ -8,13 +8,13 @@
 
 import SwiftUI
 
-struct MainScreenCell: View {
+struct SpoonMainScreenCell: View {
     
      let item: Catalog
     
     var body: some View {
         
-        VStack{
+        VStack(){
             
             Image(item.image).resizable().frame(width: 400, height: 120).cornerRadius(15)
             Text(item.name).font(.title)
@@ -29,6 +29,6 @@ struct MainScreenCell: View {
 
 struct MainScreenCell_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreenCell(item: catalog[0])
+        SpoonMainScreenCell(item: catalog[0])
     }
 }
