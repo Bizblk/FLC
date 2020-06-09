@@ -17,6 +17,7 @@ struct MainScreen: View {
         VStack {
             NavigationView {
                 
+                
                 List {
                     ForEach(catalog, content: { item in
                         MainScreenCell(item: item)

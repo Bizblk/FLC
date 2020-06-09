@@ -126,7 +126,7 @@ struct Wobbler: Identifiable, Hashable {
 
 var spoons = [
     
-    Spoon(name: "Winger", weight: [16,21,28], color: ["RW","BRW","LM"], availability: true, price: 75, discription: "nice spool", gategory: .bait, spinnerType: .shaker),
+    Spoon(name: "Winger", weight: [16,21,28], color: ["3","4","5"], availability: true, price: 75, discription: "nice spool", gategory: .bait, spinnerType: .shaker),
     Spoon(name: "SRV", weight: [10.5,14,21], color: ["RW","BRW","LM"], availability: true, price: 75, discription: "nice spool", gategory: .bait, spinnerType: .rotate)
 ]
 var wobblers = [
