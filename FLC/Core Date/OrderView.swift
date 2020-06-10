@@ -18,47 +18,45 @@ struct OrderView: View {
     var body: some View {
         
         NavigationView {
-            
             List {
-
                 HStack {
                     TextField("New Order", text: self.$newOrder)
                     Button(action: {
                         let order = Order(context: self.managedObjectContext)
                         order.name = self.newOrder
-                        order.createdAt = Data()
+                        order.createdAt = Date()
                         
                         do {
                             try self.managedObjectContext.save()
                         }catch {
                             print(error)
                         }
-                        
                         self.newOrder = ""
                         
                     }) {
                         Image(systemName: "plus.circle.fill").foregroundColor(.green).imageScale(.large)
                     }
                 }
-                
-                
-                HStack {
+                Section {
                     ForEach(self.order) { order in
                         OrderCell(name: order.name!, createdAt: "\(order.createdAt!)")
+                    }.onDelete { indexSet in
+                        let deleteItem = self.order[indexSet.first!]
+                        self.managedObjectContext.delete(deleteItem)
+                        
+                        do {
+                            try self.managedObjectContext.save()
+                        }catch {
+                            print(error)
+                        }
                     }
-                    
-                    
                 }
-                
             }
             .navigationBarTitle("Order")
             .navigationBarItems(trailing: EditButton())
             
         }
-    
-        
     }
-    
 }
 
 struct OrderView_Previews: PreviewProvider {

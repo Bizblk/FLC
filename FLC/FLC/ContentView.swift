@@ -16,10 +16,10 @@ struct ContentView: View {
         
         NavigationView {
             VStack {
-                NavigationLink(destination: OrderView()){
-                    Text("Go Order ")
-
-                }
+//                NavigationLink(destination: OrderView()){
+//                    Text("Go Order ")
+//
+//                }
                 List {
                     ForEach(diametrs[0], content: { line in
                         LineCell(line: line)

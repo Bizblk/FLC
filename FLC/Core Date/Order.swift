@@ -11,7 +11,7 @@ import CoreData
 
 public class Order: NSManagedObject, Identifiable {
     
-    @NSManaged public var createdAt: Data?
+    @NSManaged public var createdAt: Date?
     @NSManaged public var name: String?
 
     
