@@ -20,6 +20,9 @@
 		1F299F31248F02F40094511A /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F30248F02F40094511A /* SliderCell.swift */; };
 		1F299F5A248FC0700094511A /* FishingLineMainScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F59248FC0700094511A /* FishingLineMainScreenCell.swift */; };
 		1F299F5E248FD28E0094511A /* SpoonTableWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F5D248FD28E0094511A /* SpoonTableWeight.swift */; };
+		1F299F63249054E30094511A /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F62249054E30094511A /* Order.swift */; };
+		1F299F65249059320094511A /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F64249059320094511A /* OrderView.swift */; };
+		1F299F67249061570094511A /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F66249061570094511A /* OrderCell.swift */; };
 		404B071A248DAE0B0090A49A /* SpoonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B0719248DAE0B0090A49A /* SpoonCell.swift */; };
 		404B071C248DAE290090A49A /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B071B248DAE290090A49A /* MainScreen.swift */; };
 		404B071E248DB4490090A49A /* SpoonMainScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B071D248DB4490090A49A /* SpoonMainScreenCell.swift */; };
@@ -41,6 +44,9 @@
 		1F299F30248F02F40094511A /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		1F299F59248FC0700094511A /* FishingLineMainScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingLineMainScreenCell.swift; sourceTree = "<group>"; };
 		1F299F5D248FD28E0094511A /* SpoonTableWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonTableWeight.swift; sourceTree = "<group>"; };
+		1F299F62249054E30094511A /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		1F299F64249059320094511A /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		1F299F66249061570094511A /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		404B0719248DAE0B0090A49A /* SpoonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonCell.swift; sourceTree = "<group>"; };
 		404B071B248DAE290090A49A /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		404B071D248DB4490090A49A /* SpoonMainScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonMainScreenCell.swift; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 				1F299F5B248FC1670094511A /* FLC */,
 				1F299F2B24896B7D0094511A /* Model */,
 				404B071B248DAE290090A49A /* MainScreen.swift */,
+				1F299F5F249054740094511A /* Core Date */,
 				1F299F5C248FD1A00094511A /* Spoon */,
 				404B0718248DADD80090A49A /* FishingLine */,
 				1F299F1B24896A4C0094511A /* Assets.xcassets */,
@@ -127,6 +134,16 @@
 				404B071D248DB4490090A49A /* SpoonMainScreenCell.swift */,
 			);
 			path = Spoon;
+			sourceTree = "<group>";
+		};
+		1F299F5F249054740094511A /* Core Date */ = {
+			isa = PBXGroup;
+			children = (
+				1F299F62249054E30094511A /* Order.swift */,
+				1F299F66249061570094511A /* OrderCell.swift */,
+				1F299F64249059320094511A /* OrderView.swift */,
+			);
+			path = "Core Date";
 			sourceTree = "<group>";
 		};
 		404B0718248DADD80090A49A /* FishingLine */ = {
@@ -214,8 +231,11 @@
 				1F299F5E248FD28E0094511A /* SpoonTableWeight.swift in Sources */,
 				404B071A248DAE0B0090A49A /* SpoonCell.swift in Sources */,
 				404B071C248DAE290090A49A /* MainScreen.swift in Sources */,
+				1F299F67249061570094511A /* OrderCell.swift in Sources */,
+				1F299F63249054E30094511A /* Order.swift in Sources */,
 				1F299F1324896A480094511A /* AppDelegate.swift in Sources */,
 				1F299F2D248972C70094511A /* LineCell.swift in Sources */,
+				1F299F65249059320094511A /* OrderView.swift in Sources */,
 				1F299F5A248FC0700094511A /* FishingLineMainScreenCell.swift in Sources */,
 				404B071E248DB4490090A49A /* SpoonMainScreenCell.swift in Sources */,
 				1F299F1A24896A480094511A /* ContentView.swift in Sources */,

@@ -15,15 +15,23 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-            
-            List {
-                ForEach(diametrs[0], content: { line in
-                    LineCell(line: line)
-                })
-                
-                
+            VStack {
+                NavigationLink(destination: OrderView()){
+                    Text("Go Order ")
+
+                }
+                List {
+                    ForEach(diametrs[0], content: { line in
+                        LineCell(line: line)
+                    })
+                    
+                    
+                }
             }
+                
+                
             .navigationBarTitle("FLC",displayMode: .inline)
+            
             
         }
         
