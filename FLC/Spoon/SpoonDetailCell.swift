@@ -12,10 +12,13 @@ struct SpoonDetailCell: View {
     
     let item:  Spoon
     
+    
     var body: some View {
         
         VStack {
-            Image(item.color[0]).resizable().frame(width: 400, height: 300)
+            Image(item.color[0])
+                .resizable()
+                .frame(width: 400, height: 300)
             Spacer()
             
             ScrollView {

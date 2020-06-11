@@ -12,7 +12,6 @@ struct SliderCell: View {
     
     var item: Spoon
     
-    
     var body: some View {
         
         ScrollView(.horizontal) {

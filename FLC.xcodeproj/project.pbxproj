@@ -23,6 +23,9 @@
 		1F299F63249054E30094511A /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F62249054E30094511A /* Order.swift */; };
 		1F299F65249059320094511A /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F64249059320094511A /* OrderView.swift */; };
 		1F299F67249061570094511A /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F66249061570094511A /* OrderCell.swift */; };
+		1F299F69249270810094511A /* FishingLineGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F68249270810094511A /* FishingLineGroup.swift */; };
+		1F299F6B249274ED0094511A /* FishingDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F6A249274ED0094511A /* FishingDetailCell.swift */; };
+		1F299F6D249277410094511A /* FishingLineTableWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F6C249277410094511A /* FishingLineTableWeight.swift */; };
 		404B071A248DAE0B0090A49A /* SpoonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B0719248DAE0B0090A49A /* SpoonCell.swift */; };
 		404B071C248DAE290090A49A /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B071B248DAE290090A49A /* MainScreen.swift */; };
 		404B071E248DB4490090A49A /* SpoonMainScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B071D248DB4490090A49A /* SpoonMainScreenCell.swift */; };
@@ -47,6 +50,9 @@
 		1F299F62249054E30094511A /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		1F299F64249059320094511A /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		1F299F66249061570094511A /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		1F299F68249270810094511A /* FishingLineGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingLineGroup.swift; sourceTree = "<group>"; };
+		1F299F6A249274ED0094511A /* FishingDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingDetailCell.swift; sourceTree = "<group>"; };
+		1F299F6C249277410094511A /* FishingLineTableWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingLineTableWeight.swift; sourceTree = "<group>"; };
 		404B0719248DAE0B0090A49A /* SpoonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonCell.swift; sourceTree = "<group>"; };
 		404B071B248DAE290090A49A /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		404B071D248DB4490090A49A /* SpoonMainScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonMainScreenCell.swift; sourceTree = "<group>"; };
@@ -150,6 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				1F299F59248FC0700094511A /* FishingLineMainScreenCell.swift */,
+				1F299F68249270810094511A /* FishingLineGroup.swift */,
+				1F299F6A249274ED0094511A /* FishingDetailCell.swift */,
+				1F299F6C249277410094511A /* FishingLineTableWeight.swift */,
 			);
 			path = FishingLine;
 			sourceTree = "<group>";
@@ -234,11 +243,14 @@
 				1F299F67249061570094511A /* OrderCell.swift in Sources */,
 				1F299F63249054E30094511A /* Order.swift in Sources */,
 				1F299F1324896A480094511A /* AppDelegate.swift in Sources */,
+				1F299F69249270810094511A /* FishingLineGroup.swift in Sources */,
 				1F299F2D248972C70094511A /* LineCell.swift in Sources */,
 				1F299F65249059320094511A /* OrderView.swift in Sources */,
+				1F299F6D249277410094511A /* FishingLineTableWeight.swift in Sources */,
 				1F299F5A248FC0700094511A /* FishingLineMainScreenCell.swift in Sources */,
 				404B071E248DB4490090A49A /* SpoonMainScreenCell.swift in Sources */,
 				1F299F1A24896A480094511A /* ContentView.swift in Sources */,
+				1F299F6B249274ED0094511A /* FishingDetailCell.swift in Sources */,
 				1F299F2F248EFCDB0094511A /* SpoonDetailCell.swift in Sources */,
 				1F299F1524896A480094511A /* SceneDelegate.swift in Sources */,
 			);
