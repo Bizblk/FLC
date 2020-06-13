@@ -163,6 +163,49 @@ struct FishingLine: Identifiable, Hashable {
  }
 
 
+
+struct HardLine: Identifiable, Hashable {
+    
+    var id = UUID()
+    var diametr: Double
+    var test: Double
+    var availability: Bool
+    var price: Double
+    var metr: Int
+
+}
+
+var hardLines = [
+    HardLine(diametr: 0.161, test: 3.2, availability: true, price: 75, metr: 100),
+    HardLine(diametr: 0.181, test: 4.2, availability: true, price: 75, metr: 100),
+    HardLine(diametr: 0.201, test: 5.1, availability: true, price: 75, metr: 100),
+    HardLine(diametr: 0.161, test: 3.2, availability: true, price: 75, metr: 50),
+    HardLine(diametr: 0.181, test: 4.2, availability: true, price: 75, metr: 50),
+    HardLine(diametr: 0.201, test: 5.1, availability: true, price: 75, metr: 50)
+]
+
+
+struct HardLines: Identifiable, Hashable {
+    
+    var id = UUID()
+    var name: String
+    var discription: String
+    var gategory: Category
+    var fishingLineType: FishingLineType
+    var hardlines = [HardLine]()
+    
+    
+}
+
+
+var TestHardLines = [
+    HardLines(name: "Chery", discription: "Chery the new line", gategory: .fishingLine, fishingLineType: .monophilic, hardlines: hardLines)
+    
+]
+
+
+
+
 enum BraidedType: String {
     case x4
     case x8

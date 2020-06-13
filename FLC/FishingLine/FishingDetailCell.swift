@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct FishingDetailCell: View {
+    
+    
     var body: some View {
         VStack {
         VStack {
@@ -17,24 +19,59 @@ struct FishingDetailCell: View {
                 .multilineTextAlignment(.center)
                 .lineLimit(7)
         }
-            Section {
-                ScrollView {
-                    FishingLineTableWeight()
-                    FishingLineTableWeight()
-                    FishingLineTableWeight()
-                    FishingLineTableWeight()
-                    FishingLineTableWeight()
-                    FishingLineTableWeight()
-                    FishingLineTableWeight()
-                    FishingLineTableWeight()
-                    FishingLineTableWeight()
-                    
+            VStack {
+                List {
+                    Section (header: Text("50 metr")){
+                        ScrollView {
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            
+                        }
+                        
+                    }
+                    Section(header: Text("100 metr")) {
+                        ScrollView {
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            
+                        }
+                        
+                    }
+                    Section(header: Text("150 metr")) {
+                        ScrollView {
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            FishingLineTableWeight()
+                            
+                        }
+                        
+                    }
                 }
                 
                 
-                
-                
             }
+            
+            
         }
     }
 }

@@ -9,25 +9,27 @@
 import SwiftUI
 
 struct FishingLineTableWeight: View {
+    
+    
+    
+    
+    
     var body: some View {
 
-        ZStack {
-            RoundedRectangle(cornerRadius: 15)
-                   .stroke(Color.black, lineWidth: 3)
-                   .frame(width: 350, height: 100)
+        
             HStack {
-                
-                           HStack {
-                               Text("Dia 0.161")
-                               Text("Test 3kg")
-                               Circle()
-                                   .frame(width: 15, height: 15)
-                                   .foregroundColor(.green)
-                           }
-            }
-           
+                       Text("Dia 0.161")
+                       Text("Test 3kg")
+                       Circle()
+                           .frame(width: 15, height: 15)
+                           .foregroundColor(.green)
+                   }
+        
+       
+        
+        
 
-        }
+        
     
        
 
