@@ -23,7 +23,7 @@ struct SpoonDetailCell: View {
             
             ScrollView {
                 Text(item.discription)
-                .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.center)
             }
             
             Text(String(item.price))

@@ -10,35 +10,35 @@ import SwiftUI
 
 struct FishingLineTableWeight: View {
     
-    
-    
+    var lines: [FishingLine]
+    var metr: String
     
     
     var body: some View {
 
-        
-            HStack {
-                       Text("Dia 0.161")
-                       Text("Test 3kg")
-                       Circle()
-                           .frame(width: 15, height: 15)
-                           .foregroundColor(.green)
-                   }
-        
-       
-        
-        
-
-        
-    
-       
-
-
+        Section (header: Text("Count of metr \(metr)")
+            .font(.title)){
+         //   Text("Count of metr \(metr)")
+     
+            ForEach(self.lines) { line in
+                HStack {
+                    Text(String(line.diametr))
+                    Text(String(line.test))
+                    Text(String(line.price))
+                    Circle()
+                        .frame(width: 15, height: 15)
+                        .foregroundColor(.green)
+                }
+                
+            }
+            
+        }
+ 
     }
 }
 
 struct FishingLineTableWeight_Previews: PreviewProvider {
     static var previews: some View {
-        FishingLineTableWeight()
+        FishingLineTableWeight(lines: testHardLines[0].fishingLines, metr: "50")
     }
 }

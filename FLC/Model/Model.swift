@@ -151,55 +151,66 @@ enum FishingLineType: String {
 struct FishingLine: Identifiable, Hashable {
     
     var id = UUID()
-    var name: String
-    var diameter: [Double: Double]
-    var color: String
-    var availability: Bool
-    var price: Double
-    var discription: String
-    var gategory: Category
-    var fishingLineType: FishingLineType
-    
- }
-
-
-
-struct HardLine: Identifiable, Hashable {
-    
-    var id = UUID()
     var diametr: Double
     var test: Double
     var availability: Bool
     var price: Double
     var metr: Int
+    
+ }
 
-}
+
+
+
 
 var hardLines = [
-    HardLine(diametr: 0.161, test: 3.2, availability: true, price: 75, metr: 100),
-    HardLine(diametr: 0.181, test: 4.2, availability: true, price: 75, metr: 100),
-    HardLine(diametr: 0.201, test: 5.1, availability: true, price: 75, metr: 100),
-    HardLine(diametr: 0.161, test: 3.2, availability: true, price: 75, metr: 50),
-    HardLine(diametr: 0.181, test: 4.2, availability: true, price: 75, metr: 50),
-    HardLine(diametr: 0.201, test: 5.1, availability: true, price: 75, metr: 50)
+    FishingLine(diametr: 0.161, test: 3.2, availability: true, price: 75, metr: 100),
+    FishingLine(diametr: 0.181, test: 4.2, availability: true, price: 75, metr: 100),
+    FishingLine(diametr: 0.201, test: 5.1, availability: true, price: 75, metr: 100),
+    FishingLine(diametr: 0.161, test: 3.2, availability: true, price: 75, metr: 50),
+    FishingLine(diametr: 0.181, test: 4.2, availability: true, price: 75, metr: 50),
+    FishingLine(diametr: 0.201, test: 5.1, availability: true, price: 75, metr: 50),
+    FishingLine(diametr: 0.161, test: 3.2, availability: true, price: 75, metr: 100),
+    FishingLine(diametr: 0.181, test: 4.2, availability: true, price: 75, metr: 100),
+    FishingLine(diametr: 0.201, test: 5.1, availability: true, price: 75, metr: 100),
+    FishingLine(diametr: 0.161, test: 3.2, availability: true, price: 75, metr: 50),
+    FishingLine(diametr: 0.181, test: 4.2, availability: true, price: 75, metr: 50),
+    FishingLine(diametr: 0.201, test: 5.1, availability: true, price: 75, metr: 50),
+    FishingLine(diametr: 0.161, test: 3.2, availability: true, price: 75, metr: 100),
+    FishingLine(diametr: 0.181, test: 4.2, availability: true, price: 75, metr: 100),
+    FishingLine(diametr: 0.201, test: 5.1, availability: true, price: 75, metr: 100),
+    FishingLine(diametr: 0.161, test: 3.2, availability: true, price: 75, metr: 50),
+    FishingLine(diametr: 0.181, test: 4.2, availability: true, price: 75, metr: 50),
+    FishingLine(diametr: 0.201, test: 5.1, availability: true, price: 75, metr: 50),
+    FishingLine(diametr: 0.161, test: 3.2, availability: true, price: 75, metr: 100),
+    FishingLine(diametr: 0.181, test: 4.2, availability: true, price: 75, metr: 100),
+    FishingLine(diametr: 0.201, test: 5.1, availability: true, price: 75, metr: 100),
+    FishingLine(diametr: 0.161, test: 3.2, availability: true, price: 75, metr: 50),
+    FishingLine(diametr: 0.181, test: 4.2, availability: true, price: 75, metr: 50),
+    FishingLine(diametr: 0.201, test: 5.1, availability: true, price: 75, metr: 50)
 ]
 
 
-struct HardLines: Identifiable, Hashable {
+var groupFishingLine: [Int: [FishingLine]] {.init(grouping: hardLines, by: {$0.metr})}
+
+
+
+struct FishingLines: Identifiable, Hashable {
     
     var id = UUID()
     var name: String
     var discription: String
     var gategory: Category
     var fishingLineType: FishingLineType
-    var hardlines = [HardLine]()
-    
+    var fishingLines = [FishingLine]()
+    var image: String
     
 }
 
 
-var TestHardLines = [
-    HardLines(name: "Chery", discription: "Chery the new line", gategory: .fishingLine, fishingLineType: .monophilic, hardlines: hardLines)
+var testHardLines = [
+    FishingLines(name: "Chery", discription: "Chery the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "30"),
+    FishingLines(name: "Exstasy", discription: "Exstasy the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "31")
     
 ]
 
@@ -226,20 +237,24 @@ struct BraidedLine: Identifiable, Hashable {
  }
 
 
-var fishingLines = [
-    [
-        FishingLine(name: "Megastrong", diameter: [0.261 : 10.2, 0.309 : 14.5], color: "Red", availability: true, price: 90, discription: "nice chamelion line", gategory: .fishingLine, fishingLineType: .monophilic),
-        FishingLine(name: "Hardline", diameter: [0.148 : 4.2, 0.161 : 6.1], color: "Transparent", availability: true, price: 90, discription: "nice chamelion line", gategory: .fishingLine, fishingLineType: .fluorocarbon)
-    ],
-    [
-        BraidedLine(name: "Sportmaxx Power", diameter: [15 : 7.5, 20 : 12], color: "Moss Green", availability: true, price: 550, discription: "nice Braided", gategory: .bait, braidedType: .x4),
-        BraidedLine(name: "Megastrong", diameter: [10 : 5, 12 : 6.5], color: "Orange", availability: true, price: 350, discription: "OMG 350 price!!!!", gategory: .bait, braidedType: .x8)
-        
-    ]
-    
-]
+//var fishingLines = [
+//    [
+//        FishingLine(name: "Megastrong", diameter: [0.261 : 10.2, 0.309 : 14.5], color: "Red", availability: true, price: 90, discription: "nice chamelion line", gategory: .fishingLine, fishingLineType: .monophilic),
+//        FishingLine(name: "Hardline", diameter: [0.148 : 4.2, 0.161 : 6.1], color: "Transparent", availability: true, price: 90, discription: "nice chamelion line", gategory: .fishingLine, fishingLineType: .fluorocarbon)
+//    ],
+//    [
+//        BraidedLine(name: "Sportmaxx Power", diameter: [15 : 7.5, 20 : 12], color: "Moss Green", availability: true, price: 550, discription: "nice Braided", gategory: .bait, braidedType: .x4),
+//        BraidedLine(name: "Megastrong", diameter: [10 : 5, 12 : 6.5], color: "Orange", availability: true, price: 350, discription: "OMG 350 price!!!!", gategory: .bait, braidedType: .x8)
+//
+//    ]
+//
+//]
 
 
 
-
+extension Int: Identifiable {
+    public var id: Int {
+        return self
+    }
+}
 

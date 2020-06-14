@@ -10,64 +10,20 @@ import SwiftUI
 
 struct FishingDetailCell: View {
     
+    var lines: FishingLines
     
     var body: some View {
         VStack {
         VStack {
-            Image("30").resizable().frame(width: 300, height: 300)
-            Text("Уникальное высокотехнологичное покрытие-хамелеон, в основе которого флюорокарбон - особенность лесок бренда Chimera обширного семейства Hardline. В чем его преимущество? Во-первых, оно способно менять оттенки, 'подстраиваясь' под окружающую среду. Это обеспечивает маскировку в любых условиях, что важно при охоте на осторожную рыбу. Во-вторых, покрытие увеличивает износостойкость. Защищает от ультрафиолета. А это, соответственно, продлевает срок службы лески. В качестве материала для самой мононити Chimera Hardline используется модифицированный полимер. Он обеспечивает большую прочность, как линейную, так и на узлах. При этом данная леска не жесткая. Практически не обладает памятью. Отличается высокой сенсорикой. Серия - тонущая, что может влиять на заглубление воблера. Кроме ловли на спиннинг, бейткастинга, линейка подойдет и для поплавочной, и донной рыбалки. Представители бренда Chimera, который является российским, подчеркивают, что выпускается Hardline-хамелеон в Японии.")
+            Image(lines.image).resizable().frame(width: 200, height: 200)
+            Text(lines.discription)
                 .multilineTextAlignment(.center)
                 .lineLimit(7)
-        }
-            VStack {
-                List {
-                    Section (header: Text("50 metr")){
-                        ScrollView {
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            
-                        }
-                        
-                    }
-                    Section(header: Text("100 metr")) {
-                        ScrollView {
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            
-                        }
-                        
-                    }
-                    Section(header: Text("150 metr")) {
-                        ScrollView {
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            FishingLineTableWeight()
-                            
-                        }
-                        
-                    }
-                }
-                
+        
+           
+            ScrollView {
+                FishingLineSection()
+            }
                 
             }
             
@@ -78,6 +34,6 @@ struct FishingDetailCell: View {
 
 struct FishingDetailCell_Previews: PreviewProvider {
     static var previews: some View {
-        FishingDetailCell()
+        FishingDetailCell(lines: testHardLines[0])
     }
 }
