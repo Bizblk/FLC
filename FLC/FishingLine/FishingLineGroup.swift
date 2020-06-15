@@ -13,6 +13,7 @@ struct FishingLineGroup: View {
         
         
         VStack {
+            
             Section {
                 ScrollView(.horizontal) {
                     HStack {

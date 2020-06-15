@@ -191,6 +191,23 @@ var hardLines = [
 ]
 
 
+var sportMaxx = [
+    FishingLine(diametr: 0.10, test: 1.1, availability: true, price: 50, metr: 50),
+    FishingLine(diametr: 0.12, test: 2.1, availability: true, price: 50, metr: 50),
+    FishingLine(diametr: 0.14, test: 3.1, availability: true, price: 50, metr: 50),
+    FishingLine(diametr: 0.16, test: 4.1, availability: true, price: 50, metr: 50),
+    FishingLine(diametr: 0.18, test: 5.1, availability: true, price: 50, metr: 50),
+    FishingLine(diametr: 0.20, test: 6.1, availability: true, price: 50, metr: 50),
+    FishingLine(diametr: 0.16, test: 4.1, availability: true, price: 80, metr: 100),
+    FishingLine(diametr: 0.18, test: 5.1, availability: true, price: 80, metr: 100),
+    FishingLine(diametr: 0.20, test: 6.1, availability: true, price: 80, metr: 100),
+    FishingLine(diametr: 0.22, test: 7.1, availability: true, price: 80, metr: 100),
+    FishingLine(diametr: 0.25, test: 8.1, availability: true, price: 80, metr: 100),
+    FishingLine(diametr: 0.28, test: 9.1, availability: true, price: 80, metr: 100),
+
+
+]
+
 var groupFishingLine: [Int: [FishingLine]] {.init(grouping: hardLines, by: {$0.metr})}
 
 
@@ -210,9 +227,26 @@ struct FishingLines: Identifiable, Hashable {
 
 var testHardLines = [
     FishingLines(name: "Chery", discription: "Chery the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "30"),
-    FishingLines(name: "Exstasy", discription: "Exstasy the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "31")
+    FishingLines(name: "Exstasy", discription: "Exstasy the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "31"),
+    FishingLines(name: "Iguana", discription: "Iguana the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "30"),
+    FishingLines(name: "Golden Green", discription: "Golden Green the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "31")
+    
     
 ]
+
+var testSportMaxx = [
+    FishingLines(name: "Pure", discription: "Pure the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: sportMaxx, image: "30"),
+    FishingLines(name: "Exstasy", discription: "Green the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: sportMaxx, image: "31"),
+    FishingLines(name: "Iguana", discription: "Smoke the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: sportMaxx, image: "30")
+    
+    
+]
+
+var allLines = [testHardLines,testSportMaxx]
+
+
+
+
 
 
 

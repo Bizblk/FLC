@@ -10,30 +10,41 @@ import SwiftUI
 
 struct FishingDetailCell: View {
     
-    var lines: FishingLines
+    var lines: [FishingLines]
     
     var body: some View {
-        VStack {
-        VStack {
-            Image(lines.image).resizable().frame(width: 200, height: 200)
-            Text(lines.discription)
-                .multilineTextAlignment(.center)
-                .lineLimit(7)
-        
-           
-            ScrollView {
-                FishingLineSection()
-            }
+        ScrollView(.horizontal) {
+            HStack() {
+                ForEach(lines, content: { line in
+                    Section {
+                        VStack {
+                            Image(line.image).resizable().frame(width: 250, height: 200)
+                            Text(line.discription)
+                                .multilineTextAlignment(.center)
+                                .lineLimit(7)
+                            
+                            
+                            ScrollView {
+                                FishingLineSection()
+                            }
+                            
+                        }
+                    }
+                })
                 
             }
-            
-            
         }
+        
+      
+        
+            
+            
+        
     }
 }
 
 struct FishingDetailCell_Previews: PreviewProvider {
     static var previews: some View {
-        FishingDetailCell(lines: testHardLines[0])
+        FishingDetailCell(lines: testHardLines)
     }
 }
