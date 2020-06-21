@@ -23,7 +23,23 @@ struct MainScreen: View {
                         SpoonMainScreenCell(item: catalog[0])
                     }.buttonStyle(PlainButtonStyle())
                     
+                    
+                    NavigationLink(destination: FishingLineGroup()) {
                     FishingLineMainScreenCell(item: catalog[1])
+                    }.buttonStyle(PlainButtonStyle())
+                    
+                    
+                    NavigationLink(destination: OrderView()) {
+                        Text("Go to Order").font(.largeTitle)
+                    }.buttonStyle(PlainButtonStyle())
+                    
+                    NavigationLink(destination: ContentView()) {
+                        Text("Go to Calculator").font(.largeTitle)
+                    }.buttonStyle(PlainButtonStyle())
+                    
+                    
+                    
+                    
                 }
                 .navigationBarTitle("Catalog", displayMode: .inline)
             }

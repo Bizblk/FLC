@@ -10,7 +10,8 @@ import SwiftUI
 
 struct FishingLineSection: View {
     
-    var groupFishingLine: [Int: [FishingLine]] {.init(grouping: hardLines, by: {$0.metr})}
+    var lines: [FishingLine]
+    var groupFishingLine: [Int: [FishingLine]] {.init(grouping: lines, by: {$0.metr})}
 
     
     
@@ -33,6 +34,6 @@ struct FishingLineSection: View {
 
 struct FishingLineSection_Previews: PreviewProvider {
     static var previews: some View {
-        FishingLineSection()
+        FishingLineSection(lines: hardLines)
     }
 }

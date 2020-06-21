@@ -11,25 +11,74 @@ import SwiftUI
 struct FishingLineGroup: View {
     var body: some View {
         
-        
         VStack {
-            
-            Section {
+            Section(header: Text("HardLine")
+                .font(.largeTitle))
+            {
                 ScrollView(.horizontal) {
                     HStack {
-                        Image("30").resizable().frame(width: 150, height: 150)
-                        Image("31").resizable().frame(width: 150, height: 150)
-                        Image("32").resizable().frame(width: 150, height: 150)
+                        ForEach(testHardLines, content: { item in
+                            NavigationLink(destination: FishingDetailCell(line: item, lines: item.fishingLines)) {
+                                VStack {
+                                    Image(item.image).resizable().frame(width: 150, height: 150)
+                                    Text(item.name).font(.title)
+                                }
+                            }.buttonStyle(PlainButtonStyle())
+                            
+                        } )
                     }
+                    
                 }
+                
             }
-            Section {
-                HStack {
-                    Image("35").resizable().frame(width: 150, height: 150)
+            
+            Section(header: Text("SportMaxx")
+                .font(.largeTitle))
+            {
+                ScrollView(.horizontal) {
+                    HStack {
+                        ForEach(testSportMaxx, content: { item in
+                            NavigationLink(destination: FishingDetailCell(line: item, lines: item.fishingLines)) {
+                                VStack {
+                                    Image(item.image).resizable().frame(width: 150, height: 150)
+                                    Text(item.name).font(.title)
+                                }
+                            }.buttonStyle(PlainButtonStyle())
+                            
+                            
+                            
+                        } )
+                    }
                     
                 }
             }
+            
         }
+        
+        
+        
+        
+        
+//        VStack {
+//
+//            Section (header: Text("HardLIne")){
+//                ScrollView(.horizontal) {
+//                    HStack {
+//                        ForEach(testHardLines, content: { line in
+//                            VStack {
+//                                    Image(line.image).resizable().frame(width: 150, height: 150)
+//                                Text(line.name)
+//                            }
+//
+//
+//                        })
+//                    }
+//
+//
+//                }
+//            }
+//
+//        }
         
         
         
