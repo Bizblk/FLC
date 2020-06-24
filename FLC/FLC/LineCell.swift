@@ -44,6 +44,7 @@ struct LineCell: View {
                 HStack {
                     Spacer(minLength: 20)
                     Text(line.name)
+                        .font(.footnote)
                     TextField("enter weight", text: $enterTheWeight).frame(width: 100)
                     Spacer()
                 }
@@ -53,8 +54,8 @@ struct LineCell: View {
                             Text(String(metr))
                                 .frame(width: 50.0)
                             Spacer()
-                            Text(self.countOfSpool(metr: metr))
-                                .multilineTextAlignment(.center)
+                            Text(self.countOfSpool(metr: metr)).font(.headline)
+                                .multilineTextAlignment(.center).colorMultiply(Color.red)
                             Spacer(minLength: 20)
                             
                             

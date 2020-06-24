@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct MainScreen: View {
+struct MainScreen: View { 
             
     var body: some View {
         
