@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F0D577024A360D100435F37 /* AddCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D576F24A360D100435F37 /* AddCart.swift */; };
-		1F0D577224A3765C00435F37 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D577124A3765C00435F37 /* Cart.swift */; };
-		1F0D577424A377F600435F37 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D577324A377F600435F37 /* CartCell.swift */; };
-		1F0D577624A37AE300435F37 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D577524A37AE300435F37 /* CartView.swift */; };
+		1F0D577824A3AA2500435F37 /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D577724A3AA2500435F37 /* OrderButton.swift */; };
 		1F299F1324896A480094511A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F1224896A480094511A /* AppDelegate.swift */; };
 		1F299F1524896A480094511A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F1424896A480094511A /* SceneDelegate.swift */; };
 		1F299F1824896A480094511A /* FLC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F1624896A480094511A /* FLC.xcdatamodeld */; };
@@ -37,10 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F0D576F24A360D100435F37 /* AddCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCart.swift; sourceTree = "<group>"; };
-		1F0D577124A3765C00435F37 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
-		1F0D577324A377F600435F37 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
-		1F0D577524A37AE300435F37 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		1F0D577724A3AA2500435F37 /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		1F299F0F24896A480094511A /* FLC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F299F1224896A480094511A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F299F1424896A480094511A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,10 +76,6 @@
 		1F0D576E24A360B200435F37 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
-				1F0D576F24A360D100435F37 /* AddCart.swift */,
-				1F0D577124A3765C00435F37 /* Cart.swift */,
-				1F0D577524A37AE300435F37 /* CartView.swift */,
-				1F0D577324A377F600435F37 /* CartCell.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -170,6 +160,7 @@
 				1F299F62249054E30094511A /* Order.swift */,
 				1F299F66249061570094511A /* OrderCell.swift */,
 				1F299F64249059320094511A /* OrderView.swift */,
+				1F0D577724A3AA2500435F37 /* OrderButton.swift */,
 			);
 			path = "Core Date";
 			sourceTree = "<group>";
@@ -263,23 +254,20 @@
 				1F299F5E248FD28E0094511A /* SpoonTableWeight.swift in Sources */,
 				404B071A248DAE0B0090A49A /* SpoonCell.swift in Sources */,
 				404B071C248DAE290090A49A /* MainScreen.swift in Sources */,
-				1F0D577624A37AE300435F37 /* CartView.swift in Sources */,
 				1F299F67249061570094511A /* OrderCell.swift in Sources */,
 				1F299F63249054E30094511A /* Order.swift in Sources */,
 				1F299F1324896A480094511A /* AppDelegate.swift in Sources */,
 				1F299F69249270810094511A /* FishingLineGroup.swift in Sources */,
 				1F299F2D248972C70094511A /* LineCell.swift in Sources */,
 				1F299F65249059320094511A /* OrderView.swift in Sources */,
-				1F0D577424A377F600435F37 /* CartCell.swift in Sources */,
 				1F299F6D249277410094511A /* FishingLineTableWeight.swift in Sources */,
-				1F0D577024A360D100435F37 /* AddCart.swift in Sources */,
 				1F299F5A248FC0700094511A /* FishingLineMainScreenCell.swift in Sources */,
-				1F0D577224A3765C00435F37 /* Cart.swift in Sources */,
 				404B071E248DB4490090A49A /* SpoonMainScreenCell.swift in Sources */,
 				1F299F1A24896A480094511A /* ContentView.swift in Sources */,
 				4046E8392494DFCF000F56EF /* FishingLineSection.swift in Sources */,
 				1F299F6B249274ED0094511A /* FishingDetailCell.swift in Sources */,
 				1F299F2F248EFCDB0094511A /* SpoonDetailCell.swift in Sources */,
+				1F0D577824A3AA2500435F37 /* OrderButton.swift in Sources */,
 				1F299F1524896A480094511A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

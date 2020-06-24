@@ -13,6 +13,9 @@ public class Order: NSManagedObject, Identifiable {
     
     @NSManaged public var createdAt: Date?
     @NSManaged public var name: String?
+    @NSManaged public var art: String?
+    @NSManaged public var count: String?
+    @NSManaged public var price: Double
 
     
 }

@@ -20,6 +20,9 @@ struct OrderView: View {
         NavigationView {
             List {
                 HStack {
+                    NavigationLink(destination: MainScreen()) {
+                        Image("30").resizable().frame(width: 50, height: 50)
+                    }
                     TextField("New Order", text: self.$newOrder)
                     Button(action: {
                         let order = Order(context: self.managedObjectContext)
@@ -39,7 +42,7 @@ struct OrderView: View {
                 }
                 Section {
                     ForEach(self.order) { order in
-                        OrderCell(name: order.name!, createdAt: "\(order.createdAt!)")
+                        OrderCell(name: order.name!, createdAt: "\(order.createdAt!)",price: order.price, count: order.count ?? "0" )
                     }.onDelete { indexSet in
                         let deleteItem = self.order[indexSet.first!]
                         self.managedObjectContext.delete(deleteItem)
@@ -54,6 +57,7 @@ struct OrderView: View {
             }
             .navigationBarTitle("Order")
             .navigationBarItems(trailing: EditButton())
+            
             
         }
     }
