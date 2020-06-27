@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033632D8AAB16CD88F24FD64 /* Pods_FLC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B49E53387C81D91736F46A6 /* Pods_FLC.framework */; };
 		1F0D577824A3AA2500435F37 /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D577724A3AA2500435F37 /* OrderButton.swift */; };
 		1F299F1324896A480094511A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F1224896A480094511A /* AppDelegate.swift */; };
 		1F299F1524896A480094511A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F1424896A480094511A /* SceneDelegate.swift */; };
@@ -27,6 +28,8 @@
 		1F299F69249270810094511A /* FishingLineGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F68249270810094511A /* FishingLineGroup.swift */; };
 		1F299F6B249274ED0094511A /* FishingDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F6A249274ED0094511A /* FishingDetailCell.swift */; };
 		1F299F6D249277410094511A /* FishingLineTableWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F6C249277410094511A /* FishingLineTableWeight.swift */; };
+		403F3B7924A7E1C200D9C0A7 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F3B7824A7E1C200D9C0A7 /* AuthView.swift */; };
+		403F81C824A74C1E0009874F /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 403F81C724A74C1E0009874F /* GoogleService-Info-2.plist */; };
 		4046E8392494DFCF000F56EF /* FishingLineSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046E8382494DFCF000F56EF /* FishingLineSection.swift */; };
 		404B071A248DAE0B0090A49A /* SpoonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B0719248DAE0B0090A49A /* SpoonCell.swift */; };
 		404B071C248DAE290090A49A /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B071B248DAE290090A49A /* MainScreen.swift */; };
@@ -56,10 +59,15 @@
 		1F299F68249270810094511A /* FishingLineGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingLineGroup.swift; sourceTree = "<group>"; };
 		1F299F6A249274ED0094511A /* FishingDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingDetailCell.swift; sourceTree = "<group>"; };
 		1F299F6C249277410094511A /* FishingLineTableWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingLineTableWeight.swift; sourceTree = "<group>"; };
+		403F3B7824A7E1C200D9C0A7 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		403F81C724A74C1E0009874F /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		4046E8382494DFCF000F56EF /* FishingLineSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingLineSection.swift; sourceTree = "<group>"; };
 		404B0719248DAE0B0090A49A /* SpoonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonCell.swift; sourceTree = "<group>"; };
 		404B071B248DAE290090A49A /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		404B071D248DB4490090A49A /* SpoonMainScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonMainScreenCell.swift; sourceTree = "<group>"; };
+		6B49E53387C81D91736F46A6 /* Pods_FLC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FLC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E18692CE3FD89FCC5E16CA04 /* Pods-FLC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLC.release.xcconfig"; path = "Target Support Files/Pods-FLC/Pods-FLC.release.xcconfig"; sourceTree = "<group>"; };
+		F4CE21FE3A46E59FBE2E5F17 /* Pods-FLC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLC.debug.xcconfig"; path = "Target Support Files/Pods-FLC/Pods-FLC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033632D8AAB16CD88F24FD64 /* Pods_FLC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +94,8 @@
 			children = (
 				1F299F1124896A480094511A /* FLC */,
 				1F299F1024896A480094511A /* Products */,
+				AF14F07FE9B2E9D50978E866 /* Pods */,
+				E91B1C22CE5D6F4CD1EC345C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +110,7 @@
 		1F299F1124896A480094511A /* FLC */ = {
 			isa = PBXGroup;
 			children = (
+				4088414024A75469001908F6 /* Firebase */,
 				1F0D576E24A360B200435F37 /* Cart */,
 				1F299F1224896A480094511A /* AppDelegate.swift */,
 				1F299F1424896A480094511A /* SceneDelegate.swift */,
@@ -112,6 +124,7 @@
 				1F299F2024896A4C0094511A /* LaunchScreen.storyboard */,
 				1F299F2324896A4C0094511A /* Info.plist */,
 				1F299F1624896A480094511A /* FLC.xcdatamodeld */,
+				403F81C724A74C1E0009874F /* GoogleService-Info-2.plist */,
 				1F299F1D24896A4C0094511A /* Preview Content */,
 			);
 			path = FLC;
@@ -177,6 +190,31 @@
 			path = FishingLine;
 			sourceTree = "<group>";
 		};
+		4088414024A75469001908F6 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				403F3B7824A7E1C200D9C0A7 /* AuthView.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		AF14F07FE9B2E9D50978E866 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F4CE21FE3A46E59FBE2E5F17 /* Pods-FLC.debug.xcconfig */,
+				E18692CE3FD89FCC5E16CA04 /* Pods-FLC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E91B1C22CE5D6F4CD1EC345C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B49E53387C81D91736F46A6 /* Pods_FLC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F299F2624896A4C0094511A /* Build configuration list for PBXNativeTarget "FLC" */;
 			buildPhases = (
+				3D3479EBB9E740EC1BB0409F /* [CP] Check Pods Manifest.lock */,
 				1F299F0B24896A480094511A /* Sources */,
 				1F299F0C24896A480094511A /* Frameworks */,
 				1F299F0D24896A480094511A /* Resources */,
+				CDD7AA4E5F5DDD026D51C458 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,11 +277,54 @@
 			files = (
 				1F299F2224896A4C0094511A /* LaunchScreen.storyboard in Resources */,
 				1F299F1F24896A4C0094511A /* Preview Assets.xcassets in Resources */,
+				403F81C824A74C1E0009874F /* GoogleService-Info-2.plist in Resources */,
 				1F299F1C24896A4C0094511A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D3479EBB9E740EC1BB0409F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FLC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDD7AA4E5F5DDD026D51C458 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FLC/Pods-FLC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FLC/Pods-FLC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FLC/Pods-FLC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F299F0B24896A480094511A /* Sources */ = {
@@ -261,6 +344,7 @@
 				1F299F2D248972C70094511A /* LineCell.swift in Sources */,
 				1F299F65249059320094511A /* OrderView.swift in Sources */,
 				1F299F6D249277410094511A /* FishingLineTableWeight.swift in Sources */,
+				403F3B7924A7E1C200D9C0A7 /* AuthView.swift in Sources */,
 				1F299F5A248FC0700094511A /* FishingLineMainScreenCell.swift in Sources */,
 				404B071E248DB4490090A49A /* SpoonMainScreenCell.swift in Sources */,
 				1F299F1A24896A480094511A /* ContentView.swift in Sources */,
@@ -402,6 +486,7 @@
 		};
 		1F299F2724896A4C0094511A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4CE21FE3A46E59FBE2E5F17 /* Pods-FLC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -422,6 +507,7 @@
 		};
 		1F299F2824896A4C0094511A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E18692CE3FD89FCC5E16CA04 /* Pods-FLC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
