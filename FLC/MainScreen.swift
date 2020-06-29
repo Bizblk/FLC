@@ -29,10 +29,10 @@ struct MainScreen: View {
                     }.buttonStyle(PlainButtonStyle())
                     
                     
-                    NavigationLink(destination: OrderView()) {
-                        Text("Go to Order").font(.largeTitle)
-                    }.buttonStyle(PlainButtonStyle())
-                    
+//                    NavigationLink(destination: OrderView()) {
+//                        Text("Go to Order").font(.largeTitle)
+//                    }.buttonStyle(PlainButtonStyle())
+                    Spacer()
                     NavigationLink(destination: ContentView()) {
                         Text("Go to Calculator").font(.largeTitle)
                     }.buttonStyle(PlainButtonStyle())

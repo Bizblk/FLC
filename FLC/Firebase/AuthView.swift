@@ -7,8 +7,9 @@
 //
 
 import SwiftUI
-
+import Firebase
 struct AuthView: View {
+    
     
     @State var mail = ""
     @State var password = ""
@@ -16,10 +17,17 @@ struct AuthView: View {
     var body: some View {
         
         
-        VStack{
+        VStack {
             TextField("enter you mail", text: $mail)
             TextField("enter you password", text: $password)
-        }
+            Button(action:  { print("hello")  },
+                    label:   {Text("go") })
+           
+                  
+               
+                    
+            
+        }.background(Color.red)
         
     }
 }
