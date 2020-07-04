@@ -30,11 +30,12 @@
 		1F299F6D249277410094511A /* FishingLineTableWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F6C249277410094511A /* FishingLineTableWeight.swift */; };
 		403F3B7924A7E1C200D9C0A7 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F3B7824A7E1C200D9C0A7 /* AuthView.swift */; };
 		4043547C24A9263E0022F0F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4043547B24A9263D0022F0F5 /* GoogleService-Info.plist */; };
+		404389E824B1467F007D9DB7 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404389E724B1467F007D9DB7 /* SignUp.swift */; };
 		4046E8392494DFCF000F56EF /* FishingLineSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046E8382494DFCF000F56EF /* FishingLineSection.swift */; };
 		404B071A248DAE0B0090A49A /* SpoonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B0719248DAE0B0090A49A /* SpoonCell.swift */; };
 		404B071C248DAE290090A49A /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B071B248DAE290090A49A /* MainScreen.swift */; };
 		404B071E248DB4490090A49A /* SpoonMainScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B071D248DB4490090A49A /* SpoonMainScreenCell.swift */; };
-		40AE80DD24AA83EC00227CEC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AE80DC24AA83EC00227CEC /* LoginView.swift */; };
+		40AE80DD24AA83EC00227CEC /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AE80DC24AA83EC00227CEC /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,11 +63,12 @@
 		1F299F6C249277410094511A /* FishingLineTableWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingLineTableWeight.swift; sourceTree = "<group>"; };
 		403F3B7824A7E1C200D9C0A7 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		4043547B24A9263D0022F0F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		404389E724B1467F007D9DB7 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		4046E8382494DFCF000F56EF /* FishingLineSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingLineSection.swift; sourceTree = "<group>"; };
 		404B0719248DAE0B0090A49A /* SpoonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonCell.swift; sourceTree = "<group>"; };
 		404B071B248DAE290090A49A /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		404B071D248DB4490090A49A /* SpoonMainScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonMainScreenCell.swift; sourceTree = "<group>"; };
-		40AE80DC24AA83EC00227CEC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		40AE80DC24AA83EC00227CEC /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		6B49E53387C81D91736F46A6 /* Pods_FLC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FLC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18692CE3FD89FCC5E16CA04 /* Pods-FLC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLC.release.xcconfig"; path = "Target Support Files/Pods-FLC/Pods-FLC.release.xcconfig"; sourceTree = "<group>"; };
 		F4CE21FE3A46E59FBE2E5F17 /* Pods-FLC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLC.debug.xcconfig"; path = "Target Support Files/Pods-FLC/Pods-FLC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,7 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				403F3B7824A7E1C200D9C0A7 /* AuthView.swift */,
-				40AE80DC24AA83EC00227CEC /* LoginView.swift */,
+				40AE80DC24AA83EC00227CEC /* Login.swift */,
+				404389E724B1467F007D9DB7 /* SignUp.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -338,7 +341,7 @@
 				1F299F2A24896B790094511A /* Model.swift in Sources */,
 				1F299F1824896A480094511A /* FLC.xcdatamodeld in Sources */,
 				1F299F5E248FD28E0094511A /* SpoonTableWeight.swift in Sources */,
-				40AE80DD24AA83EC00227CEC /* LoginView.swift in Sources */,
+				40AE80DD24AA83EC00227CEC /* Login.swift in Sources */,
 				404B071A248DAE0B0090A49A /* SpoonCell.swift in Sources */,
 				404B071C248DAE290090A49A /* MainScreen.swift in Sources */,
 				1F299F67249061570094511A /* OrderCell.swift in Sources */,
@@ -347,6 +350,7 @@
 				1F299F69249270810094511A /* FishingLineGroup.swift in Sources */,
 				1F299F2D248972C70094511A /* LineCell.swift in Sources */,
 				1F299F65249059320094511A /* OrderView.swift in Sources */,
+				404389E824B1467F007D9DB7 /* SignUp.swift in Sources */,
 				1F299F6D249277410094511A /* FishingLineTableWeight.swift in Sources */,
 				403F3B7924A7E1C200D9C0A7 /* AuthView.swift in Sources */,
 				1F299F5A248FC0700094511A /* FishingLineMainScreenCell.swift in Sources */,
