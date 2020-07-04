@@ -17,18 +17,41 @@ struct AuthView: View {
     var body: some View {
         
         
-        VStack {
-            TextField("enter you mail", text: $mail)
-            TextField("enter you password", text: $password)
-            Button(action:  { print("hello")  },
-                    label:   {Text("go") })
-           
-                  
-               
-                    
+        ZStack {
+            Image("999")
+                .blur(radius: /*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 80.0) {
             
-        }.background(Color.red)
-        
+            
+                
+            
+            VStack(spacing: 20.0) {
+                Text("Chimera")
+                    .font(.largeTitle)
+                Text("User does not exist")
+                    .foregroundColor(Color.red)
+            }
+            VStack(spacing: 50.0) {
+                
+                VStack {
+                    TextField("enter you mail", text: $mail).frame(width: 250)
+                    TextField("enter you password", text: $password).frame(width: 250)
+                }
+                
+                VStack(spacing: 30.0) {
+                    Button(action:  { print("hello")  },
+                           label:   {Text("Login")
+                            .font(.title) }).frame(width: 200)
+                    
+                    Button(action:  { print("hello")  },
+                           label:   {Text("Register") }).frame(width: 200)
+                    
+                }
+                
+                
+            }
+        }
+        }
     }
 }
 
