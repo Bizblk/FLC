@@ -16,6 +16,7 @@ struct SignUp: View {
     @State var repass = ""
     @State var visible = false
     @State var revisible = false
+    @Binding var show: Bool
     var body: some View {
         
    
@@ -26,7 +27,7 @@ struct SignUp: View {
                 
                 VStack {
                     
-                    Image("999").resizable()
+                    Image("999").resizable().frame(width: 250, height: 250)
                     
                     Text("Log in to your account")
                         .font(.title)
@@ -36,7 +37,7 @@ struct SignUp: View {
                     
                     TextField("Email", text: self.$email)
                         .padding()
-                        .background(RoundedRectangle(cornerRadius: 4).stroke(self.email != "" ? Color("Color") : self.color, lineWidth: 2))
+                        .background(RoundedRectangle(cornerRadius: 4).stroke(self.email != "" ? Color(.red) : self.color, lineWidth: 2))
                         .padding(.top, 25)
                     
                     HStack(spacing: 15) {
@@ -69,10 +70,10 @@ struct SignUp: View {
                       
                       VStack {
                           if self.revisible {
-                              TextField("Password", text: self.$repass)
+                              TextField("Re-enter", text: self.$repass)
                           }
                           else {
-                              SecureField("Password", text: self.$repass)
+                              SecureField("Re-enter", text: self.$repass)
                           }
                       }
                     
@@ -88,7 +89,7 @@ struct SignUp: View {
                       
                   }
                   .padding()
-                  .background(RoundedRectangle(cornerRadius: 4).stroke(self.pass != "" ? Color(.red) : self.color, lineWidth: 2))
+                  .background(RoundedRectangle(cornerRadius: 4).stroke(self.repass != "" ? Color(.red) : self.color, lineWidth: 2))
                   .padding(.top, 25)
 
                     
@@ -125,8 +126,8 @@ struct SignUp: View {
     }
 }
 
-struct SignUp_Previews: PreviewProvider {
-    static var previews: some View {
-        SignUp()
-    }
-}
+//struct SignUp_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SignUp(show: self.$show)
+//    }
+//}

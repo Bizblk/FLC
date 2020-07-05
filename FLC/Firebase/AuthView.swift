@@ -10,48 +10,22 @@ import SwiftUI
 import Firebase
 struct AuthView: View {
     
-    
-    @State var mail = ""
-    @State var password = ""
-    
+    @State var show = false
+   
     var body: some View {
         
-        
-        ZStack {
-            Image("999")
-                .blur(radius: /*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
-        VStack(spacing: 80.0) {
+        NavigationView {
             
-            
-                
-            
-            VStack(spacing: 20.0) {
-                Text("Chimera")
-                    .font(.largeTitle)
-                Text("User does not exist")
-                    .foregroundColor(Color.red)
-            }
-            VStack(spacing: 50.0) {
-                
-                VStack {
-                    TextField("enter you mail", text: $mail).frame(width: 250)
-                    TextField("enter you password", text: $password).frame(width: 250)
+            ZStack {
+                NavigationLink(destination: SignUp(show: self.$show), isActive: self.$show) {
+                    Text("")
                 }
-                
-                VStack(spacing: 30.0) {
-                    Button(action:  { print("hello")  },
-                           label:   {Text("Login")
-                            .font(.title) }).frame(width: 200)
-                    
-                    Button(action:  { print("hello")  },
-                           label:   {Text("Register") }).frame(width: 200)
-                    
-                }
-                
-                
+            .hidden()
+                Login(show: self.$show)
             }
+            
         }
-        }
+  
     }
 }
 

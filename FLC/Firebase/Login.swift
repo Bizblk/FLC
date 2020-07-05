@@ -14,6 +14,7 @@ struct Login: View {
     @State var email = ""
     @State var pass = ""
     @State var visible = false
+    @Binding var show: Bool
     var body: some View {
         
    
@@ -24,7 +25,7 @@ struct Login: View {
                 
                 VStack {
                     
-                    Image("999").resizable()
+                    Image("999").resizable().frame(width: 250, height: 250)
                     
                     Text("Log in to your account")
                         .font(.title)
