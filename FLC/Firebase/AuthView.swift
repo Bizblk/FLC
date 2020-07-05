@@ -24,6 +24,11 @@ struct AuthView: View {
                 Login(show: self.$show)
             }
             
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+            
+            
         }
   
     }

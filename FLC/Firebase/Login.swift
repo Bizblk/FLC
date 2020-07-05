@@ -95,6 +95,8 @@ struct Login: View {
             
             Button(action:  {
                 
+                self.show.toggle()
+                
             }) {
                 
                 Text("Register")
@@ -109,8 +111,8 @@ struct Login: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        Login()
-    }
-}
+//struct LoginView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Login(, show: <#Binding<Bool>#>)
+//    }
+//}

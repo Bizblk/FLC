@@ -112,6 +112,8 @@ struct SignUp: View {
             
             Button(action:  {
                 
+                self.show.toggle()
+                
             }) {
                 
                Image(systemName: "chevron.left")
@@ -121,7 +123,8 @@ struct SignUp: View {
             }
             .padding()
         }
-        
+        .navigationBarBackButtonHidden(true)
+
     
     }
 }
