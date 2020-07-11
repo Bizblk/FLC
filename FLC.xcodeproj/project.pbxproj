@@ -27,6 +27,7 @@
 		1F299F69249270810094511A /* FishingLineGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F68249270810094511A /* FishingLineGroup.swift */; };
 		1F299F6B249274ED0094511A /* FishingDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F6A249274ED0094511A /* FishingDetailCell.swift */; };
 		1F299F6D249277410094511A /* FishingLineTableWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F299F6C249277410094511A /* FishingLineTableWeight.swift */; };
+		1F40CCEC24B8C3780073726A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40CCEB24B8C3780073726A /* Home.swift */; };
 		403E13A224B2622600FCF7DB /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403E13A124B2622600FCF7DB /* Error.swift */; };
 		403E13A424B2806A00FCF7DB /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403E13A324B2806A00FCF7DB /* HomeScreen.swift */; };
 		403F3B7924A7E1C200D9C0A7 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F3B7824A7E1C200D9C0A7 /* AuthView.swift */; };
@@ -63,6 +64,7 @@
 		1F299F68249270810094511A /* FishingLineGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingLineGroup.swift; sourceTree = "<group>"; };
 		1F299F6A249274ED0094511A /* FishingDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingDetailCell.swift; sourceTree = "<group>"; };
 		1F299F6C249277410094511A /* FishingLineTableWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingLineTableWeight.swift; sourceTree = "<group>"; };
+		1F40CCEB24B8C3780073726A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		403E13A124B2622600FCF7DB /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		403E13A324B2806A00FCF7DB /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		403F3B7824A7E1C200D9C0A7 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -118,7 +120,8 @@
 		1F299F1124896A480094511A /* FLC */ = {
 			isa = PBXGroup;
 			children = (
-				4088414024A75469001908F6 /* Firebase */,
+				1F40CCEA24B8C30A0073726A /* FirebaseFirestore */,
+				4088414024A75469001908F6 /* FirebaseAuth */,
 				1F0D576E24A360B200435F37 /* Cart */,
 				1F299F1224896A480094511A /* AppDelegate.swift */,
 				1F299F1424896A480094511A /* SceneDelegate.swift */,
@@ -186,13 +189,20 @@
 			path = "Core Date";
 			sourceTree = "<group>";
 		};
+		1F40CCEA24B8C30A0073726A /* FirebaseFirestore */ = {
+			isa = PBXGroup;
+			children = (
+				1F40CCEB24B8C3780073726A /* Home.swift */,
+			);
+			path = FirebaseFirestore;
+			sourceTree = "<group>";
+		};
 		2AC27CA5BEBFD45FBAFE86C0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				413C7127B6BF2BDF217A56C6 /* Pods-FLC.debug.xcconfig */,
 				6BB251D81C625B82FCEF7483 /* Pods-FLC.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +218,7 @@
 			path = FishingLine;
 			sourceTree = "<group>";
 		};
-		4088414024A75469001908F6 /* Firebase */ = {
+		4088414024A75469001908F6 /* FirebaseAuth */ = {
 			isa = PBXGroup;
 			children = (
 				403F3B7824A7E1C200D9C0A7 /* AuthView.swift */,
@@ -217,7 +227,7 @@
 				40AE80DC24AA83EC00227CEC /* Login.swift */,
 				404389E724B1467F007D9DB7 /* SignUp.swift */,
 			);
-			path = Firebase;
+			path = FirebaseAuth;
 			sourceTree = "<group>";
 		};
 		F3C173C8E4FBDEEB46261FB5 /* Frameworks */ = {
@@ -366,6 +376,7 @@
 				1F299F1A24896A480094511A /* ContentView.swift in Sources */,
 				4046E8392494DFCF000F56EF /* FishingLineSection.swift in Sources */,
 				1F299F6B249274ED0094511A /* FishingDetailCell.swift in Sources */,
+				1F40CCEC24B8C3780073726A /* Home.swift in Sources */,
 				1F299F2F248EFCDB0094511A /* SpoonDetailCell.swift in Sources */,
 				1F0D577824A3AA2500435F37 /* OrderButton.swift in Sources */,
 				403E13A224B2622600FCF7DB /* Error.swift in Sources */,
