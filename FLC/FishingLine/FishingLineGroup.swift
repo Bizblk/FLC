@@ -10,7 +10,7 @@ import SwiftUI
 
 struct FishingLineGroup: View {
     
-    @ObservedObject var line = GetData(name: .pure)
+    @ObservedObject var products = GetData(name: .pure)
     
     
     var body: some View {
@@ -41,9 +41,11 @@ struct FishingLineGroup: View {
             {
                 ScrollView(.horizontal) {
                     HStack {
+                        
                         ForEach(testSportMaxx, content: { item in
-                            NavigationLink(destination: FishingDetailCell(product: item, products: self.line.data  )) {
+                            NavigationLink(destination: FishingDetailCell(product: item, products: self.products.getDatas(name: item.names)  )) {
                                 VStack {
+
                                     Image(item.image).resizable().frame(width: 150, height: 150)
                                     Text(item.name).font(.title)
                                 }

@@ -24,9 +24,9 @@ struct FishingDetailCell: View {
                 Text("Woe")
                     .multilineTextAlignment(.center)
                     .lineLimit(7)
-//                ScrollView {
-//                    FishingLineSection(products: self.products)
-//                }
+                ScrollView {
+                    FishingLineSection(products: self.products)
+                }
             }
         }
         

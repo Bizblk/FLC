@@ -157,6 +157,17 @@ var wobblers = [
 
 //MARK: FishingLine
 
+
+ enum FishingLineNames: String {
+    case green = "Deep Green"
+    case pure = "Pure Transparent"
+    case smoke = "Steel Smoke"
+    case cherry = "Crerry Blood"
+    case ecstasy = "Ecstasy Clear"
+    case iguana = "Iguana Green"
+    
+}
+
 enum FishingLineType: String {
     case monophilic
     case fluorocarbon
@@ -235,7 +246,7 @@ struct FishingLines: Identifiable, Hashable {
     var fishingLineType: FishingLineType
     var fishingLines = [FishingLine]()
     var image: String
-    var names: GetData.names
+    var names: FishingLineNames
 }
 
 

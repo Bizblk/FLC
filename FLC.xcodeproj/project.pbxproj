@@ -128,6 +128,7 @@
 				4088414024A75469001908F6 /* FirebaseAuth */,
 				1F0D576E24A360B200435F37 /* Cart */,
 				1F299F1224896A480094511A /* AppDelegate.swift */,
+				1F299F2924896B790094511A /* Model.swift */,
 				1F299F1424896A480094511A /* SceneDelegate.swift */,
 				1F299F5B248FC1670094511A /* FLC */,
 				1F299F2B24896B7D0094511A /* Model */,
@@ -156,7 +157,6 @@
 		1F299F2B24896B7D0094511A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1F299F2924896B790094511A /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

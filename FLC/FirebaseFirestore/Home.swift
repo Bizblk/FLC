@@ -24,6 +24,7 @@ struct Home: View {
                     Text(item.price)
                     Text(item.dia)
                     Text(item.stock)
+                    Text(item.metrs)
 
 
 
@@ -55,17 +56,12 @@ class GetData: ObservableObject {
    
     
     
-    public enum names: String {
-        case green = "Deep Green"
-        case pure = "Pure Transparent"
-        case smoke = "Steel Smoke"
-        case cherry = "Crerry Blood"
-        case ecstasy = "Ecstasy Clear"
-        case iguana = "Iguana Green"
-        
-    }
     
-    func getDatas(name: names) -> [product] {
+    
+    func getDatas(name: FishingLineNames) -> [product] {
+        print("GetdatasStart")
+        var testttt = [product]()
+
         let db = Firestore.firestore()
               db.collection("Sportmaxx").whereField("name", isEqualTo: name.rawValue)
                   .getDocuments { (querySnapshot, err) in
@@ -79,17 +75,19 @@ class GetData: ObservableObject {
                               let group = item.get("group") as! String
                               let dia = item.get("diameter") as! String
                               let stock = item.get("stock") as! String
-                              
-                              self.datas.append(product(id: id, name: name, price: price, pic: id, group: group, dia: dia, stock: stock))
+                              let metrs = item.get("metrs") as! String
+                              print("GetdatasStart - for")
+
+                            testttt.append(product(id: id, name: name, price: price, pic: id, group: group, dia: dia, stock: stock, metrs: metrs))
 
                           }
                       }
               }
-        return data
+        return testttt
     }
     
     
-    init(name: names ) {
+    init(name: FishingLineNames ) {
         let db = Firestore.firestore()
         db.collection("Sportmaxx").whereField("name", isEqualTo: name.rawValue)
             .getDocuments { (querySnapshot, err) in
@@ -103,8 +101,9 @@ class GetData: ObservableObject {
                         let group = item.get("group") as! String
                         let dia = item.get("diameter") as! String
                         let stock = item.get("stock") as! String
+                        let metrs = item.get("metrs") as! String
                         
-                        self.data.append(product(id: id, name: name, price: price, pic: id, group: group, dia: dia, stock: stock))
+                        self.data.append(product(id: id, name: name, price: price, pic: id, group: group, dia: dia, stock: stock, metrs: metrs))
 
                     }
                 }
@@ -122,12 +121,13 @@ struct product: Identifiable {
     var group : String
     var dia : String
     var stock : String
+    var metrs : String
     
 }
 
 
 var test = [
-product(id: "qwe", name: "max", price: "123", pic: "123", group: "1322", dia: "22", stock: "true"),
-product(id: "dasd", name: "222", price: "12sda3", pic: "1sad23", group: "13sad22", dia: "2asd2", stock: "true"),
+    product(id: "qwe", name: "max", price: "123", pic: "123", group: "1322", dia: "22", stock: "true", metrs: "100"),
+    product(id: "dasd", name: "222", price: "12sda3", pic: "1sad23", group: "13sad22", dia: "2asd2", stock: "true", metrs: "50"),
 
 ]
