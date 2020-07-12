@@ -49,7 +49,8 @@ struct Home_Previews: PreviewProvider {
 
 class GetData: ObservableObject {
     @Published var data = [product]()
-    
+    @Published var datas = [product]()
+
     
    
     
@@ -79,7 +80,7 @@ class GetData: ObservableObject {
                               let dia = item.get("diameter") as! String
                               let stock = item.get("stock") as! String
                               
-                              self.data.append(product(id: id, name: name, price: price, pic: id, group: group, dia: dia, stock: stock))
+                              self.datas.append(product(id: id, name: name, price: price, pic: id, group: group, dia: dia, stock: stock))
 
                           }
                       }

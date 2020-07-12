@@ -24,8 +24,8 @@ struct FishingLineTableWeight: View {
                 
                 ForEach(self.products) { item in
                     HStack {
-                        Text(String(item.dia))
-                        Text(String(item.price))
+                        Text(item.dia)
+                        Text(item.price)
                         Circle()
                             .frame(width: 15, height: 15)
                             .foregroundColor(.green)
@@ -38,6 +38,7 @@ struct FishingLineTableWeight: View {
         
     }
 }
+
 
 //struct FishingLineTableWeight_Previews: PreviewProvider {
 //    static var previews: some View {

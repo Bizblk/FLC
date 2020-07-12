@@ -22,7 +22,7 @@ struct FishingLineGroup: View {
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(testHardLines, content: { item in
-                            NavigationLink(destination: FishingDetailCell(product: item, products: self.line.getDatas(name: item.names) )) {
+                            NavigationLink(destination: FishingDetailCell(product: item, products: test )) {
                                 VStack {
                                     Image(item.image).resizable().frame(width: 150, height: 150)
                                     Text(item.name).font(.title)
@@ -42,7 +42,7 @@ struct FishingLineGroup: View {
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(testSportMaxx, content: { item in
-                            NavigationLink(destination: FishingDetailCell(product: item, products: self.line.getDatas(name: item.names) )) {
+                            NavigationLink(destination: FishingDetailCell(product: item, products: self.line.data  )) {
                                 VStack {
                                     Image(item.image).resizable().frame(width: 150, height: 150)
                                     Text(item.name).font(.title)

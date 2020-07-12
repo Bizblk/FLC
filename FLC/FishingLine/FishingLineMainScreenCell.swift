@@ -10,14 +10,14 @@ import SwiftUI
 
 struct FishingLineMainScreenCell: View {
     
-       let item: Catalog
+       let product: Catalog
      
      var body: some View {
          
          VStack(){
              
-             Image(item.image).resizable().frame(width: 400, height: 120).cornerRadius(15)
-             Text(item.name).font(.title)
+             Image(product.image).resizable().frame(width: 400, height: 120).cornerRadius(15)
+             Text(product.name).font(.title)
              
              
          }
@@ -29,6 +29,6 @@ struct FishingLineMainScreenCell: View {
 
 struct FishingLineMainScreenCell_Previews: PreviewProvider {
     static var previews: some View {
-        FishingLineMainScreenCell(item: catalog[1])
+        FishingLineMainScreenCell(product: catalog[1])
     }
 }

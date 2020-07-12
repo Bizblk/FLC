@@ -25,7 +25,7 @@ struct MainScreen: View {
                     
                     
                     NavigationLink(destination: FishingLineGroup()) {
-                    FishingLineMainScreenCell(item: catalog[1])
+                        FishingLineMainScreenCell(product: catalog[1])
                     }.buttonStyle(PlainButtonStyle())
                     
                     
