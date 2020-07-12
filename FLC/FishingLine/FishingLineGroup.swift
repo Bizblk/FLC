@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct FishingLineGroup: View {
+    
+    @ObservedObject var line = GetData(name: .pure)
+    
+    
     var body: some View {
         
         VStack {
@@ -18,7 +22,7 @@ struct FishingLineGroup: View {
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(testHardLines, content: { item in
-                            NavigationLink(destination: FishingDetailCell(line: item, lines: item.fishingLines)) {
+                            NavigationLink(destination: FishingDetailCell(product: item, products: self.line.getDatas(name: item.names) )) {
                                 VStack {
                                     Image(item.image).resizable().frame(width: 150, height: 150)
                                     Text(item.name).font(.title)
@@ -38,7 +42,7 @@ struct FishingLineGroup: View {
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(testSportMaxx, content: { item in
-                            NavigationLink(destination: FishingDetailCell(line: item, lines: item.fishingLines)) {
+                            NavigationLink(destination: FishingDetailCell(product: item, products: self.line.getDatas(name: item.names) )) {
                                 VStack {
                                     Image(item.image).resizable().frame(width: 150, height: 150)
                                     Text(item.name).font(.title)
@@ -54,32 +58,6 @@ struct FishingLineGroup: View {
             }
             
         }
-        
-        
-        
-        
-        
-//        VStack {
-//
-//            Section (header: Text("HardLIne")){
-//                ScrollView(.horizontal) {
-//                    HStack {
-//                        ForEach(testHardLines, content: { line in
-//                            VStack {
-//                                    Image(line.image).resizable().frame(width: 150, height: 150)
-//                                Text(line.name)
-//                            }
-//
-//
-//                        })
-//                    }
-//
-//
-//                }
-//            }
-//
-//        }
-        
         
         
     }

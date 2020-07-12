@@ -69,6 +69,11 @@ enum Category: String {
 
 //MARK: Catalog
 
+
+
+
+
+
 struct Catalog: Identifiable, Hashable {
     
     var id = UUID()
@@ -84,6 +89,7 @@ var catalog = [
 ]
 
 
+var linesGroup = [["Crerry Blood","Ecstasy Clear","Iguana Green"],["Deep Green","Pure Transparent","Steel Smoke"]]
 
 
 //MARK: BAIT
@@ -229,23 +235,23 @@ struct FishingLines: Identifiable, Hashable {
     var fishingLineType: FishingLineType
     var fishingLines = [FishingLine]()
     var image: String
-    
+    var names: GetData.names
 }
 
 
 var testHardLines = [
-    FishingLines(name: "Cherry", discription: "Chery the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "cherry"),
-    FishingLines(name: "Ecstasy", discription: "Exstasy the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "ecstasy"),
-    FishingLines(name: "Iguana", discription: "Iguana the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "iguana"),
-    FishingLines(name: "Golden Green", discription: "Golden Green the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "golden")
+    FishingLines(name: "Cherry", discription: "Chery the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "cherry", names: .cherry),
+    FishingLines(name: "Ecstasy", discription: "Exstasy the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "ecstasy", names: .ecstasy),
+    FishingLines(name: "Iguana", discription: "Iguana the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "iguana", names: .iguana),
+    FishingLines(name: "Golden Green", discription: "Golden Green the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: hardLines, image: "golden", names: .iguana)
     
     
 ]
 
 var testSportMaxx = [
-    FishingLines(name: "Pure", discription: "Pure the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: sportMaxx, image: "pure"),
-    FishingLines(name: "Green", discription: "Green the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: sportMaxx, image: "green"),
-    FishingLines(name: "Iguana", discription: "Smoke the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: sportMaxx, image: "smoke")
+    FishingLines(name: "Pure Transparent", discription: "Pure the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: sportMaxx, image: "pure", names: .pure),
+    FishingLines(name: "Deep Green", discription: "Green the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: sportMaxx, image: "green", names: .green),
+    FishingLines(name: "Smoke", discription: "Smoke the new line", gategory: .fishingLine, fishingLineType: .monophilic, fishingLines: sportMaxx, image: "smoke", names: .smoke)
     
     
 ]

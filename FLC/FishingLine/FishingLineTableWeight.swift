@@ -12,25 +12,24 @@ struct FishingLineTableWeight: View {
     
     
     
-    var lines: [FishingLine]
-    var metr: String
-    
+   // var lines: [FishingLine]
+  //  var metr: String
+    var products: [product]
     
     var body: some View {
 
-        Section (header: Text("Count of metr \(metr)")
+        Section (header: Text("Count of metr ")
             .font(.title)){
                 //   Text("Count of metr \(metr)")
                 
-                ForEach(self.lines) { line in
+                ForEach(self.products) { item in
                     HStack {
-                        Text(String(line.diametr))
-                        Text(String(line.test))
-                        Text(String(line.price))
+                        Text(String(item.dia))
+                        Text(String(item.price))
                         Circle()
                             .frame(width: 15, height: 15)
                             .foregroundColor(.green)
-                       OrderButton(line: line)
+                    //   OrderButton(line: line)
                     }
                     
                 }
@@ -40,8 +39,8 @@ struct FishingLineTableWeight: View {
     }
 }
 
-struct FishingLineTableWeight_Previews: PreviewProvider {
-    static var previews: some View {
-        FishingLineTableWeight(lines: testHardLines[0].fishingLines, metr: "50")
-    }
-}
+//struct FishingLineTableWeight_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FishingLineTableWeight(products: <#[product]#>)
+//    }
+//}

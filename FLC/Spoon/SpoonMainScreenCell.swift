@@ -27,7 +27,7 @@ struct SpoonMainScreenCell: View {
     }
 }
 
-struct MainScreenCell_Previews: PreviewProvider {
+struct SpoonMainScreenCell_Previews: PreviewProvider {
     static var previews: some View {
         SpoonMainScreenCell(item: catalog[0])
     }

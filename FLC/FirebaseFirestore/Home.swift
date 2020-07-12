@@ -16,13 +16,14 @@ struct Home: View {
     var body: some View {
         
         VStack{
-            List(line.data) {i in
+            List(line.data) {item in
                 HStack {
-                    Text(i.id)
-                    Text(i.group)
-                    Text(i.name)
-                    Text(i.price)
-                    Text(i.dia)
+                    Text(item.id)
+                    Text(item.group)
+                    Text(item.name)
+                    Text(item.price)
+                    Text(item.dia)
+                    Text(item.stock)
 
 
 
@@ -49,15 +50,45 @@ struct Home_Previews: PreviewProvider {
 class GetData: ObservableObject {
     @Published var data = [product]()
     
-    enum fishing: String{
-        case green = "Deep Green"
-        case pure = "Pure Transparent"
-    }
     
    
     
     
-    init(name: fishing ) {
+    public enum names: String {
+        case green = "Deep Green"
+        case pure = "Pure Transparent"
+        case smoke = "Steel Smoke"
+        case cherry = "Crerry Blood"
+        case ecstasy = "Ecstasy Clear"
+        case iguana = "Iguana Green"
+        
+    }
+    
+    func getDatas(name: names) -> [product] {
+        let db = Firestore.firestore()
+              db.collection("Sportmaxx").whereField("name", isEqualTo: name.rawValue)
+                  .getDocuments { (querySnapshot, err) in
+                      if  err != nil {
+                          print((err?.localizedDescription)!)
+                      } else {
+                          for item in querySnapshot!.documents {
+                              let id = item.documentID
+                              let name = item.get("name") as! String
+                              let price = item.get("price") as! String
+                              let group = item.get("group") as! String
+                              let dia = item.get("diameter") as! String
+                              let stock = item.get("stock") as! String
+                              
+                              self.data.append(product(id: id, name: name, price: price, pic: id, group: group, dia: dia, stock: stock))
+
+                          }
+                      }
+              }
+        return data
+    }
+    
+    
+    init(name: names ) {
         let db = Firestore.firestore()
         db.collection("Sportmaxx").whereField("name", isEqualTo: name.rawValue)
             .getDocuments { (querySnapshot, err) in
@@ -70,8 +101,9 @@ class GetData: ObservableObject {
                         let price = item.get("price") as! String
                         let group = item.get("group") as! String
                         let dia = item.get("diameter") as! String
+                        let stock = item.get("stock") as! String
                         
-                        self.data.append(product(id: id, name: name, price: price, pic: id, group: group, dia: dia))
+                        self.data.append(product(id: id, name: name, price: price, pic: id, group: group, dia: dia, stock: stock))
 
                     }
                 }
@@ -88,5 +120,13 @@ struct product: Identifiable {
     var pic : String
     var group : String
     var dia : String
+    var stock : String
     
 }
+
+
+var test = [
+product(id: "qwe", name: "max", price: "123", pic: "123", group: "1322", dia: "22", stock: "true"),
+product(id: "dasd", name: "222", price: "12sda3", pic: "1sad23", group: "13sad22", dia: "2asd2", stock: "true"),
+
+]

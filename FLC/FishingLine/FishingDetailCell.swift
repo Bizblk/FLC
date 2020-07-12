@@ -10,14 +10,14 @@ import SwiftUI
 
 struct FishingDetailCell: View {
     
-    var line: FishingLines
-    var lines: [FishingLine]
+    var product: FishingLines
+    var products: [product]
     
     var body: some View {
         VStack {
             VStack {
-                Image(line.image).resizable().frame(width: 250, height: 250)
-                Text(line.discription)
+                Image(product.image).resizable().frame(width: 250, height: 250)
+                Text(product.name)
 
             }
             VStack {
@@ -25,7 +25,7 @@ struct FishingDetailCell: View {
                     .multilineTextAlignment(.center)
                     .lineLimit(7)
                 ScrollView {
-                    FishingLineSection(lines: lines)
+                    FishingLineSection(products: self.products)
                 }
             }
         }
@@ -35,6 +35,6 @@ struct FishingDetailCell: View {
 
 struct FishingDetailCell_Previews: PreviewProvider {
     static var previews: some View {
-        FishingDetailCell(line: testHardLines[0], lines: hardLines)
+        FishingDetailCell(product: testSportMaxx[0], products: test)
     }
 }
