@@ -11,7 +11,6 @@ import Firebase
 
 struct Home: View {
     
-    @ObservedObject var categories = getCategoriesData()
     @ObservedObject var line = GetData.init(name: .pure)
     
     var body: some View {
@@ -44,34 +43,11 @@ struct Home_Previews: PreviewProvider {
 }
 
 
-class getCategoriesData: ObservableObject {
-    @Published var datas = [category]()
-    
-    
-    init() {
-        let db = Firestore.firestore()
-        db.collection("Sportmaxx").addSnapshotListener { (snap, err) in
-            if err != nil{
-                print((err?.localizedDescription)!)
-                return
-            }
-            for i in snap!.documentChanges{
-                let id = i.document.documentID
-                let name = i.document.get("name") as! String
-                let price = i.document.get("price") as! String
-                let group = i.document.get("group") as! String
-                let dia = i.document.get("diameter") as! String
-                
-                self.datas.append(category(id: id, name: name, price: price, pic: id, group: group, dia: dia))
 
-            }
-        }
-    }
-}
 
 
 class GetData: ObservableObject {
-    @Published var data = [category]()
+    @Published var data = [product]()
     
     enum fishing: String{
         case green = "Deep Green"
@@ -95,7 +71,7 @@ class GetData: ObservableObject {
                         let group = item.get("group") as! String
                         let dia = item.get("diameter") as! String
                         
-                        self.data.append(category(id: id, name: name, price: price, pic: id, group: group, dia: dia))
+                        self.data.append(product(id: id, name: name, price: price, pic: id, group: group, dia: dia))
 
                     }
                 }
@@ -104,7 +80,7 @@ class GetData: ObservableObject {
 }
 
 
-struct category: Identifiable {
+struct product: Identifiable {
     
     var id : String
     var name : String
